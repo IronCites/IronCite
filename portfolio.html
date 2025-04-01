@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Professional Business Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Portfolio Page Specific Styles */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .portfolio-item {
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: var(--white);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .portfolio-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-content {
+            padding: 20px;
+        }
+        
+        .portfolio-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .portfolio-content p {
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+        
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .tag {
+            background-color: rgba(26, 54, 93, 0.1);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .portfolio-link {
+            display: inline-block;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        
+        .portfolio-link:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .back-link i {
+            margin-right: 8px;
+        }
+        
+        .back-link:hover {
+            color: var(--accent-color);
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Iron Cite</h1>
+            </div>
+            <nav>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio-page" style="padding-top: 120px;">
+        <div class="container">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            
+            <h2>Past Works</h2>
+            <p>Here's a collection of my recent work. Each project represents my dedication to quality and attention to detail.</p>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-img">
+                        <img src="images\GreenVista.png" alt="Project 1">
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Landscaping Business Website Example</h3>
+                        <div class="portfolio-tags">
+                            <span class="tag">Web Design</span>
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <p>Example website for what to expect if you are a Landscaping Company</p>
+                        <a href="https://ironcites.github.io/LandscapeEx/" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+
+        </p>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="year"></span> Your Name. All Rights Reserved.</p>
+                <a href="#" class="privacy-policy">Privacy Policy</a>
+                <a href="#header" class="back-to-top">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
